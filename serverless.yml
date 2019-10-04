@@ -43,6 +43,14 @@ provider:
   name: aws
   runtime: python3.6
  
+Type: AWS::SNS::Topic
+Properties: 
+  DisplayName: 'GitHub'
+  KmsMasterKeyId: '61982e77-69bc-4a02-8cc8-df0e611a5c5d'
+  Subscription: 
+    - lambda_handler
+  TopicName: 'github'
+  
 functions:
 
   lamda_handler:
