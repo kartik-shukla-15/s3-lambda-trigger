@@ -45,7 +45,13 @@ provider:
   name: aws
   runtime: python3.6
 
+Type: AWS::S3::Bucket
+Properties: 
+  BucketName:"Incoming"
 
+Type: AWS::S3::Bucket
+Properties: 
+  BucketName:"Processed"
 
 Type: AWS::SNS::Topic
 Properties: 
